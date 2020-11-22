@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>02 CSS3边框圆角</title>
+	<style>
+		body,ul,li,dl,dt,dd,h1,h2,h3,h4,h5{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #F7F7F7;
+		}
+		.wrapper{
+            width: 1420px;
+            margin: 0 auto;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+		header{
+			padding: 20px 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		header h3{
+			line-height: 1;
+			font-weight: normal;
+			font-size: 28px;
+
+		}
+		.main:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+		.main .item{
+			width: 200px;
+			height: 200px;
+			margin: 0 30px 30px 0;
+			position:relative;
+			display: flex;
+			background-color: #fff;
+			float:left;
+			box-shadow: 2px 2px 5px #ccc;
+		}
+			.main .item:after{
+			content: attr(data-brief);
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align:center;
+			line-height:210px;
+			color:#fff;
+            font-size: 50px;
+			background-color: rgba(177,177,177,0);
+			transition: all 0.3s ease-in;
+			z-index: -1;
+		}
+		.main .item:hover:after{
+			background-color: rgba(177,177,177,0.6);
+			z-index: 100;
+		}
+        .main .item:nth-child(1){
+            background-image: linear-gradient(#f63,#58a)
+        }
+        .main .item:nth-child(2){
+            background-image: linear-gradient(#f63 20%,#58a 80%)
+        }
+        .main .item:nth-child(3){
+            background-image: linear-gradient(#f63 50%,#58a 50%)
+        }
+        .main .item:nth-child(4){
+            background-image: linear-gradient(#f63 50%,#58a 50%);
+            background-size: 100% 50px;
+        }
+         .main .item:nth-child(5){
+            background-image: linear-gradient( #f63 0%, #f63 30%,#58a 30%, #58a 100%);
+            background-size: 100% 50px;
+        }
+        .main .item:nth-child(6){
+            background-image: linear-gradient( #f63 0%, #f63 33.3%,#58a 33.3%, #58a 66.6%,#9acd32 66.6%,#9acd32 100%);
+            background-size: 100% 50px;
+        }
+        .main .item:nth-child(7){
+            background-image: linear-gradient( #f63 0%, #f63 25%,#58a 25%, #58a 50%,#9acd32 50%,#9acd32 75%,#800080 75%,#800080 100%);
+            background-size: 100% 50px;
+        }
+        .main .item:nth-child(8){
+            background-image: linear-gradient(90deg, #f63 0%, #f63 25%,#58a 25%, #58a 50%,#9acd32 50%,#9acd32 75%,#800080 75%,#800080 100%);
+            background-size:  50px 100%;
+        }
+        .main .item:nth-child(9){
+            background-image: linear-gradient(45deg,#f63 0%, #f63 25%,#58a 25%, #58a 50%,#9acd32 50%,#9acd32 75%,#800080 75%,#800080 100%);
+            background-size:25% 50px;
+        }
+         .main .item:nth-child(10){
+            background-image: linear-gradient(45deg, #f63 0%, #f63 25%,#58a 25%, #58a 50%,#f63 50%, #f63 75%,#58a 75%, #58a 100%);
+            background-size:50px 50px ;
+        }
+        .main .item:nth-child(11){
+            background-image: linear-gradient(45deg, #f63 0%, #f63 25%,#58a 25%, #58a 50%,#f63 50%, #f63 75%,#58a 75%, #58a 100%);
+            background-size:25px 25px ;
+        }
+         .main .item:nth-child(12){
+            background-image: linear-gradient(45deg, #f63 0%, #f63 20%,#58a 20%, #58a 50%,#f63 50%, #f63 70%,#58a 70%, #58a 100%);
+            background-size:57px 57px ;
+
+        }
+         .main .item:nth-child(13){
+            background-image: linear-gradient(60deg, #f63 0%, #f63 25%,#58a 25%, #58a 50%,#f63 50%, #f63 75%,#58a 75%, #58a 100%);
+            background-size:25px 44.5px ;
+
+         }
+         .main .item:nth-child(14){
+            background-image: linear-gradient(45deg,#58a 0%,#58a 25%, #6694b2 25%,#6694b2 50%,#58a 50%,#58a 75%, #6694b2 75%,#6694b2 100%);
+            background-size:50px 50px ;
+
+          }
+         .main .item:nth-child(15){
+            background-image: linear-gradient(30deg,#f63 0%,#f63 25%, #ff7547 25%,#ff7547 50%,#f63 50%,#f63 75%, #ff7547 75%,#ff7547 100%);
+            background-size:50px 29px ;
+         }
+         .main .item:nth-child(16){
+            background: #ff6633;
+            background-image: linear-gradient(rgba(225,225,225,1) 1px,transparent 0), linear-gradient(90deg,rgba(225,225,225,1) 1px,transparent 0);
+            background-size: 30px 30px;
+         }
+          .main .item:nth-child(17){
+            background: #ff6633;
+            background-image: linear-gradient(white 2px,transparent 0), linear-gradient(90deg,white 2px,transparent 0);
+            background-size: 30px 30px;
+
+          }
+            .main .item:nth-child(18){
+          background: #ff6633;
+          background-image: linear-gradient(rgba(225,225,225,0.8) 1px,transparent 0),
+          linear-gradient(90deg,rgba(225,225,225,0.8) 1px,transparent 0),
+          linear-gradient(white 2px,transparent 0),
+          linear-gradient(90deg,white 2px,transparent 0);
+          background-size: 15px 15px,15px 15px,75px 75px,75px 75px;
+        
+         }
+         .main .item:nth-child(19){
+            background-image: linear-gradient(45deg,#bbb 0%,#bbb 50%,#eee 50% ,#eee 100%);
+            background-size:15% 29px;
+         }
+         .main .item:nth-child(20){
+            background-image: linear-gradient( 90deg,#f63 0%,#f63 5%,#ab4 5% ,#ab4 10%,#f0e2db 10%,#f0e2db 20%,#655 20%,#655 30%,#ab4 30%,#ab4 40%,#f63 40%,#f63 45%,#655 45%,#655 50%,#f0e2db 50%,#f0e2db 60%,#ab4 60%,#ab4 70%,#f0e2db 70%,#f0e2db 80%,#f63 80%,#f63 85%,#655 85%,#655 90%,#ab4 90%,#ab4 100%);
+         }
+         .main .item:nth-child(21){
+            background-image: linear-gradient( 90deg,#f63 0%,#f63 6%,#ab4 6% ,#ab4 12%,#655 12%,#655 20%,#f63 20%,#f63 26%,#f0e2db 26%,#f0e2db 30%,#ab4 30%,#ab4 42%,#f63 42%,#f63 48%,#655 48%,#655 62%,#ab4 62%,#ab4 63%,#f63 63%,#f63 69%,#ab4 69%,#ab4 75%,#f0e2db 75%,#f0e2db 85%,#f63 85%,#f63 91%,#655 91%,#655 95%,#ab4 95%,#ab4 100%);
+         }
+         .main .item:nth-child(22){
+            background-image: radial-gradient(black,white)
+         }
+         .main .item:nth-child(23){
+            background-image: radial-gradient(white,#89cce8,red,black)
+         }
+          .main .item:nth-child(24){
+            background-image: radial-gradient(at right bottom,white 0%,#89cce8 10%,red 33%,black 60%)
+         }
+          .main .item:nth-child(25){
+            background-image: radial-gradient(150px 50px,white,#89cce8,red,black)
+         }
+         .main .item:nth-child(26){
+            background-image: radial-gradient(at 0px 100px,white ,black)
+         }
+          .main .item:nth-child(27){
+            background-image: radial-gradient(111px 52px at 100px 20px,white 10%,black 90%)
+         
+         }
+         .main .item:nth-child(28){
+            background-image: radial-gradient(50px 150px at 180px 100px,white,#89cce8,red,black)
+         }
+         .main .item:nth-child(29){
+            background-image: radial-gradient(#d2b48c 0%,#d2b48c 30%,#655 30%, #655 100%);
+            background-size:15% 29px;
+        }
+          
+         .main .item:nth-child(30){
+            background-image: radial-gradient(#d2b48c 30%,transparent 30%),
+            radial-gradient(#d2b48c 30%,transparent 30%);
+            background-color: #665555;
+            background-position: 0 0px,13px 13px,0 1px,10px 11px;
+            background-size: 30px 30px;
+        }
+		
+	</style>
+</head>
+<body>
+	    <div class="wrapper">
+        <header>
+        </header>
+        <div class="main">
+            <div class="item" data-brief="1"></div>
+            <div class="item" data-brief="2"></div>
+            <div class="item" data-brief="3"></div>
+            <div class="item" data-brief="4"></div>
+            <div class="item" data-brief="5"></div>
+            <div class="item" data-brief="6"></div>
+            <div class="item" data-brief="7"></div>
+            <div class="item" data-brief="8"></div>
+            <div class="item" data-brief="9"></div>
+            <div class="item" data-brief="10"></div>
+            <div class="item" data-brief="11"></div>
+            <div class="item" data-brief="12"></div>
+            <div class="item" data-brief="13"></div>
+            <div class="item" data-brief="14"></div>
+            <div class="item" data-brief="15"></div>
+            <div class="item" data-brief="16"></div>
+            <div class="item" data-brief="17"></div>
+            <div class="item" data-brief="18"></div>
+            <div class="item" data-brief="19"></div>
+            <div class="item" data-brief="20"></div>
+            <div class="item" data-brief="21"></div>
+            <div class="item" data-brief="22"></div>
+            <div class="item" data-brief="23"></div>
+            <div class="item" data-brief="24"></div>
+            <div class="item" data-brief="25"></div>
+            <div class="item" data-brief="26"></div>
+            <div class="item" data-brief="27"></div>
+            <div class="item" data-brief="28"></div>
+            <div class="item" data-brief="29"></div>
+            <div class="item" data-brief="30"></div>
+    </div>
+</body>
+</html>
