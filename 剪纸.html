@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字体</title>
+</head>
+<style type="text/css">
+
+
+    body{
+         background:#eee;
+}       
+    .con{       	
+         margin: 150px 300px auto;
+         position: relative;
+    }
+     .con>span{
+    	font-size: 100px;
+    	position: relative;
+    	color: black;
+    	display: inline-block;
+    	z-index: 9;
+    }
+    
+     span::before,span::after{
+    	content: attr(data-text);
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    }
+    span::before{
+    	color:grey;
+        display:inline-block;
+        transform-origin:left;
+        transition:all 1s;
+        z-index: -99;
+    }
+    .con:hover span::before{
+    	transform-origin:left;
+    	color: grey;
+        transform:skewY(22deg);
+        transition:all 1s;
+
+    }
+    span::after{
+    	color: white;
+    	transform-origin: left;
+    	text-shadow: black 2px 0.5px 0;
+    	display: inline-block;
+    	transition: all 1s;
+    }
+     .con:hover span::after{
+     	transform-origin:left;
+        color:white;
+        transform:rotateZ(2deg) rotateY(34deg);
+        transition: all 1s ; 
+     }
+    
+
+    
+   
+
+
+    
+
+
+
+
+</style>
+<body>
+	<div class="con">
+	  <!-- <div class="content"> -->
+	  <span data-text="前">前</span>
+	  <span data-text="端">端</span>
+	  <span data-text="攻">攻</span>
+	  <span data-text="略">略</span>
+	  </div>
+</body>
+</html>

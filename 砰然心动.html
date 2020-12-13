@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>砰然心动</title>
+</head>
+<style type="text/css">
+    
+    .heart{
+           width: 200px;
+           height: 200px;
+           background-color: red;
+           margin: 200px auto;
+           position:relative;
+           transform: rotate(45deg) scale(0.8);
+           animation: heart 1s infinite;
+           box-shadow:26px 23px 15px rgba(255,0,0,0.3);
+       }
+   
+   
+    .heart::before{
+    	position: absolute;
+        content: '某某某';
+        color: white;
+        background-color:red;
+        text-align: center;
+        line-height:159px;
+        font-size: 20px;  
+        display: block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        left: -95px;
+        transform: rotate(-46deg);
+        box-shadow:2px 1px 15px 25px rgba(255,0,0,0.3);
+    }
+    .heart::after{
+        position: absolute;
+        content: '某某某';
+        color: white;
+        background-color: red;
+        text-align: center;
+        line-height: 153px;
+        font-size: 20px;  
+        display: block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        transform: rotate(-46deg);
+        top: -95px;
+        box-shadow:2px 1px 15px 25px rgba(255,0,0,0.3);
+        }
+
+  
+    @keyframes heart{
+    	0%{
+    		transform: rotate(45deg) scale(0.8);
+    	}
+    	50%{
+    		transform: rotate(45deg) scale(1);
+    	}
+    	100%{
+    		transform: rotate(45deg) scale(0.8);
+    	}
+    }
+
+
+
+
+
+
+</style>
+<body>
+	<div class="heart"></div>
+</body>
+</html>
