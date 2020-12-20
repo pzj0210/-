@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>海底世界</title>
+</head>
+<style type="text/css">
+     body{
+     	margin: 0;
+     	padding: 0;
+     	background-color: skyblue;
+     	 }
+     .box1{
+     	width: 509px;
+     	height: 270px;
+     	/*margin: 100px auto;*/
+     	overflow: hidden;
+     	background: url(images/shark1.png) left top ;
+     	animation: move 1s steps(8) infinite,swim 20s linear infinite;
+     	position: absolute;
+     	top: -20px;
+     	left:-600px;
+     }
+
+      @keyframes move{
+      	0%{
+      	}
+
+      		100%{
+          background-position: left -2160px;
+      		}
+      	
+      }
+      @keyframes  swim{
+      	20%{
+           transform:translate(900px,0px) rotate(0deg)
+      	}
+        40%{
+        	transform:translate(900px,100px) rotate(45deg);
+        }
+        60%{
+        	transform:translate(500px,150px) rotate(150deg)
+        }
+        80%{
+        	transform:translate(100px,100px) rotate(180deg)
+        }
+        100%{
+        	transform:translate(-600px,0px) rotate(180deg)
+        }
+      }
+      .box2{
+      	width: 175px;
+     	height: 123px;
+     	/*margin: 100px auto;*/
+     	overflow: hidden;
+     	background: url(images/fish8.png) left top ;
+     	animation: movee 1s steps(12) infinite,swimming 20s linear infinite;
+     	position: absolute;
+     	top: 10%;
+     	right: 20%;
+     	/*transform: rotate(180deg);*/
+     }
+      
+      @keyframes movee{
+
+      		100%{
+          background-position: left -1512px;
+      		}
+      }
+      @keyframes  swimming{
+      	20%{
+           transform:translate(200px,0px) rotate(0deg)
+      	}
+        40%{
+        	transform:translate(170px,250px) rotate(180deg);
+        }
+        60%{
+        	transform:translate(-700px,300px) rotate(180deg)
+        }
+        80%{
+        	transform:translate(-800px,-50px) rotate(0deg)
+        }
+        100%{
+        	transform:translate(0px,-0px) rotate(0deg)
+        }
+      }
+      .box3{
+      	width: 175px;
+     	height: 123px;
+     	/*margin: 100px auto;*/
+     	overflow: hidden;
+     	background: url(images/fish8.png) left top ;
+     	animation: movee 1s steps(12) infinite,swime 20s linear infinite;
+     	position: absolute;
+     	top: 40%;
+     	right: 50%;
+     	/*transform: rotate(180deg);*/
+     }
+      
+      @keyframes movee{
+
+      		100%{
+          background-position: left -1512px;
+      		}
+      }
+      @keyframes  swime{
+      	20%{
+           transform:translate(100px,0px) rotate(0deg)
+      	}
+        40%{
+        	transform:translate(170px,10px) rotate(90deg);
+        }
+        60%{
+        	transform:translate(-100px,100px) rotate(180deg)
+        }
+        80%{
+        	transform:translate(-100px,-100px) rotate(90deg)
+        }
+        100%{
+        	transform:translate(0px,-0px) rotate(0deg)
+        }
+      }
+      .box4{
+      	width: 175px;
+     	height: 123px;
+     	/*margin: 100px auto;*/
+     	overflow: hidden;
+     	background: url(images/fish8.png) left top ;
+     	animation: movee 1s steps(12) infinite,swimm 20s linear infinite;
+     	position: absolute;
+     	top: 70%;
+     	right: 80%;
+     	/*transform: rotate(180deg);*/
+     }
+      
+      @keyframes movee{
+
+      		100%{
+          background-position: left -1512px;
+      		}
+      }
+      @keyframes  swimm{
+      	20%{
+           transform:translate(200px,0px) rotate(0deg)
+      	}
+        40%{
+        	transform:translate(170px,-200px) rotate(180deg);
+        }
+        60%{
+        	transform:translate(-700px,-100px) rotate(180deg)
+        }
+        80%{
+        	transform:translate(-800px,-50px) rotate(0deg)
+        }
+        100%{
+        	transform:translate(0px,-0px) rotate(0deg)
+        }
+      }
+</style>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+	
+</body>
+</html>

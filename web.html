@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>web</title>
+</head>
+<style type="text/css">
+       body{
+       	background-color: #fff;
+       }
+       .name{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #2a385e;
+        text-align: center ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+        z-index: 99;
+
+}
+       .name::after{
+       	content:"web全栈";
+       	color: white;
+        text-align: center;	
+        position: relative;
+        top: 40px;
+        left: 0;
+       }
+       .box1{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #e6e8ec;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -75px;
+        margin-top: -75px;
+        z-index: 98;
+
+       }
+       .box2{
+       	width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px dashed #062b63;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        z-index: 97
+       }
+       .box3{
+       	width: 75px;
+       	height: 75px;
+       	border-radius: 50%;
+        background-color: #f9ebfb;
+        position:absolute ;
+        top: 44%;
+        left: 39%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+       }
+       .box3::before{
+       	width: 50px;
+       height: 50px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(231,144,236,0.6);
+       position: absolute;
+       top: 17%;
+       left: 15%;
+       z-index: 100;
+       
+       }
+       .box3::after{
+       	content:"JQuery";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: relative;
+        top: 32%;
+        left: 23%;
+        z-index: 101;
+        
+       }
+@keyframes roll{
+    	0%{
+           
+    	}
+    	100%{
+    		transform: rotate(360deg);
+    	}
+    }
+      .box4{
+      	width: 75px;
+       	height: 75px;
+       	border-radius: 50%;
+        background-color: #ffebe8;
+        position:absolute ;
+        top: 30%;
+        left: 53%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box4::before{
+       	width: 50px;
+       height: 50px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(255,143,146,0.6);
+       position: absolute;
+       top: 17%;
+       left: 15%;
+       z-index: 100;
+       }
+       .box4::after{
+       	content:"nodejs";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 32%;
+        left: 23%;
+        z-index: 101;
+       } 
+       .box5{
+       	width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px dashed #aba0a1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -110px;
+        margin-top: -110px;
+        z-index: 96;
+
+       }
+       .box6{
+      	width: 60px;
+       	height: 60px;
+       	border-radius: 50%;
+        background-color: #f3fcf4;
+        position:absolute ;
+        top: 59%;
+        left: 42%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box6::before{
+       	width: 40px;
+       height: 40px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(185,239,201,0.6);
+       position: absolute;
+       top: 17%;
+       left: 15%;
+       z-index: 100;
+       }
+       .box6::after{
+       	content:"css";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 28%;
+        left: 34%;
+        z-index: 101;
+       }
+        .box7{
+      	width: 75px;
+       	height: 75px;
+       	border-radius: 50%;
+        background-color: #eef7fa;
+        position:absolute ;
+        top: 53%;
+        left: 55%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box7::before{
+       	width: 50px;
+       height: 50px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(157,215,235,0.6);
+       position: absolute;
+       top: 17%;
+       left: 15%;
+       z-index: 100;
+       }
+       .box7::after{
+       	content:"HTML5";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 38%;
+        left: 22%;
+        z-index: 101;
+       }
+       .box8{
+       	width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px dashed #e5bbeb;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -170px;
+        margin-top: -170px;
+        z-index: 95;
+       }
+       .box9{
+      	width: 90px;
+       	height: 90px;
+       	border-radius: 50%;
+        background-color: #eef7fa;
+        position:absolute ;
+        top: 60%;
+        left: 36%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box9::before{
+       	width: 60px;
+       height: 60px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(110,189,248,0.6);
+       position: absolute;
+       top: 17%;
+       left: 17%;
+       z-index: 100;
+       }
+       .box9::after{
+       	content:"Zetpo.js";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 38%;
+        left: 27%;
+        z-index: 101;
+       }
+       .box10{
+      	width: 90px;
+       	height: 90px;
+       	border-radius: 50%;
+        background-color: #e9f4f5;
+        position:absolute ;
+        top: 20%;
+        left: 38%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box10::before{
+       	width: 60px;
+       height: 60px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(126,198,208,0.6);
+       position: absolute;
+       top: 17%;
+       left: 17%;
+       z-index: 100;
+       }
+       .box10::after{
+       	content:"WebApp";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 38%;
+        left: 27%;
+        z-index: 101;
+       }
+       .box11{
+      	width: 90px;
+       	height: 90px;
+       	border-radius: 50%;
+        background-color: #fdd6e8;
+        position:absolute ;
+        top: 15%;
+        left: 50%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box11::before{
+       	width: 60px;
+       height: 60px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(238,57,142,0.6);
+       position: absolute;
+       top: 17%;
+       left: 17%;
+       z-index: 100;
+       }
+       .box11::after{
+       	content:"Angular.js";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 38%;
+        left: 20%;
+        z-index: 101;
+       }
+        .box12{
+      	width: 90px;
+       	height: 90px;
+       	border-radius: 50%;
+        background-color: #ffe6ea;
+        position:absolute ;
+        top: 40%;
+        left: 60%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box12::before{
+       	width: 60px;
+       height: 60px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(255,128,153,0.6);
+       position: absolute;
+       top: 17%;
+       left: 17%;
+       z-index: 100;
+       }
+       .box12::after{
+       	content:"React.js";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 38%;
+        left: 22%;
+        z-index: 101;
+       }
+       .box13{
+      	width: 90px;
+       	height: 90px;
+       	border-radius: 50%;
+        background-color: #fcfde2;
+        position:absolute ;
+        top: 70%;
+        left: 51%;
+        z-index: 97;
+        animation: roll 5s linear infinite;
+      }
+      .box13::before{
+       	width: 60px;
+       height: 60px;
+       content: "";
+       border-radius: 50%;
+       background-color:rgba(242,247,123,0.6);
+       position: absolute;
+       top: 17%;
+       left: 17%;
+       z-index: 100;
+       }
+       .box13::after{
+       	content:"Canvas";
+       	color: white;
+       	font-size:1px;
+        text-align: center;	
+        position: absolute;
+        top: 38%;
+        left: 24%;
+        z-index: 101;
+       }
+
+</style>
+<body>
+	<div class="name"></div>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div><!-- JQuery -->
+	<div class="box4"></div><!-- nodejs -->
+	<div class="box5"></div>
+	<div class="box6"></div><!-- css -->
+	<div class="box7"></div><!-- HTML5 -->
+	<div class="box8"></div>
+	<div class="box9"></div><!-- Zetpo.js -->
+	<div class="box10"></div><!-- WebApp -->
+	<div class="box11"></div><!-- Angular.js -->
+	<div class="box12"></div><!-- React.js -->
+	<div class="box13"></div><!-- Canvas -->
+</body>
+</html>
