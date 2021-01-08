@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web前端开发</title>
+    <!-- <link href="https://cdn.bootcss.com/font-awesome/5.10.2/css/fontawesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ef7373;
+    color: #485e74;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brand {
+    text-align: center;
+}
+
+.brand span {
+    color: #fff;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(249, 3, 26, 0.7);
+}
+
+.wrapper>* {
+    padding: 1em;
+}
+
+.company-info {
+    background: #f58d95;
+}
+
+.company-info h3,
+.company-info ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+
+/* form */
+
+.contact {
+    background: #fddede;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.contact form label {
+    display: block;
+}
+
+.contact form p {
+    margin: 0;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ef7373;
+}
+
+.contact form button {
+    background: #ef7373;
+    border: 0;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+    background: #92bde7;
+    color: #fff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+.contact form .full {
+    grid-column: 1/3;
+
+}
+
+.alert {
+ text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    background: #79c879;
+    display: none;
+}
+
+
+/* 大屏幕尺寸下的样式 */
+
+@media(min-width:700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .wrapper>* {
+        padding: 2em;
+    }
+    .company-info h3,
+    .company-info ul,
+    .brand {
+        text-align: left;
+    }
+}
+/*.button{
+        background: #5f0d16;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }*/
+      a {
+      position: absolute;
+      right: 0%;
+      top: 110%;
+      text-decoration: none;
+      width: 10rem;
+      height: 4rem;
+      text-align: center;
+      line-height: 4rem;
+      margin-right: 5rem;
+      color: turquoise;
+      overflow: hidden;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2rem;
+      height: 2rem;
+      border-top: 1px solid aqua;
+      border-left: 1px solid aqua;
+      transition: 0.5s ease-in;
+      transition-delay: 0.5s;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+      transition: 0.5s ease-in;
+      transition-delay: 0.5s;
+    }
+
+    a:nth-child(1) {
+      color: thistle;
+    }
+    a:nth-child(1)::after {
+      border-right: 1px solid thistle;
+      border-bottom: 1px solid thistle;
+    }
+    a:hover {
+      background-color: aqua;
+      color: #fff;
+    }
+
+    a:nth-child(1):hover {
+      background-image: linear-gradient(to bottom right, aqua, thistle);
+      box-shadow: 0 0 40px thistle;
+      transition-delay: 0.5s;
+    }
+    a:hover::before {
+      width: 100%;
+      height: 100%;
+      transition-delay: 0s;
+    }
+
+    a:hover::after {
+      width: 100%;
+      height: 100%;
+      transition-delay: 0s;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="brand"><span>99周年</span>党知识竞答活动</h1>
+        <div class="wrapper animated bounceInLeft">
+            <div class="company-info">
+                <h3>知识竞答活动</h3>
+                <ul>
+                    <li>有机会得到礼品哦</li>
+                    <li>总共分为4道题</li>
+                    <li>全部答对者将随即抽取100名幸运用户赠送99周年限量礼品</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>邮件联系</h3>
+                <div class="alert">信息发送成功！</div>
+                <form id="contactForm">
+                    <p>
+                        <label>1.中国共产党成立年份</label>
+                       <input type="text" name="name" id="name">
+                    </p>
+                    <p>
+                        <label>2.中国共产党第一次全国代表大会在哪里举行</label>
+                        <input type="text" name="company" id="company">
+                    </p>
+                    <p>
+                        <label>3.中国共产党制胜敌人的三大法宝是什么</label>
+                        <input type="text" name="name" id="name">
+                    </p>
+                    <p>
+                        <label>4.最先在中国提出“中国共产党”这个名称是谁</label>
+                        <input type="text" name="phone" id="phone">
+                    </p>
+                    <p class="full">
+                        <label>写下你对党的真挚祝福吧</label>
+                        <textarea name="message" rows="5" id="message"></textarea>
+                    </p>
+                    <p class="full">
+                        <button type="submit">提交</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+    <a href="index.html">返回</a>
+    </div>
+    <!-- 涉及到firebase，此处不详解，若有需要可联系博主QQ：2108123704 -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script src="main.js"></script>
+    <script>
+    // 初始化firebase对象
+var firebaseConfig = {
+    apiKey: "AIzaSyCm3OWWSvoYR8cvtRrXdmOk7A78pGHe128",
+    authDomain: "contactform-63c92.firebaseapp.com",
+    databaseURL: "https://contactform-63c92.firebaseio.com",
+    projectId: "contactform-63c92",
+    storageBucket: "",
+    messagingSenderId: "318791736483",
+    appId: "1:318791736483:web:d038d5377f405e84c9f316"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// 创建一个collection
+var messageRef = firebase.database().ref('message');
+
+// 1-17行代码涉及到firebase，此处不详解，若有需要联系博主QQ：2108123704
+
+// 添加submit事件
+document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+    // console.log(123);
+
+    // 获取input中的值
+    var name = getInputVal('name');
+    var company = getInputVal('company');
+    var name = getInputVal('name');
+    var phone = getInputVal('phone');
+    var message = getInputVal('message');
+    // console.log(name);
+
+    // 存储数据
+    saveMessage(name, company, name, phone, message);
+
+    // 展示alert
+    document.querySelector('.alert').style.display = 'block';
+
+    // 2秒后消失alert
+    setTimeout(function() {
+        document.querySelector('.alert').style.display = 'none';
+    }, 2000);
+
+    // 清除表单
+    document.getElementById('contactForm').reset();
+}
+
+function getInputVal(id) {
+    return document.getElementById(id).value;
+}
+
+function saveMessage(name, company, name, phone, message) {
+    messageRef.push({
+        name: name,
+        company: company,
+        name: name,
+        phone: phone,
+        message: message
+    });
+}
+
+    </script>
+</body>
+
+</html>
